@@ -14,11 +14,13 @@ h1 {
 }
 nav {
     float: right;
+    margin: 0 1.5%;
 }
 header {
-    background-color: teal;
+    background-color: rgb(39, 175, 230);
     height: 100px;
     padding-top: 30px;
+    margin: 0 1.5%;
 }
 section {
     float: left;
@@ -31,9 +33,13 @@ aside {
     margin: 0 1.5%;
 }
 footer {
-margin-bottom: 10px;
-background-color: teal;
-clear: both;
-height: 60px;
-padding-bottom: 20px;
+    bottom: 0;
+    margin-bottom: 10px;
+    background-color: rgb(39, 175, 230);
+    clear: both;
+    height: 60px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin: 0 1.5%;
+
 }
