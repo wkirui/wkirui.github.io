@@ -21,7 +21,7 @@ header {
     height: 100px;
     padding-top: 30px;
     padding-left: 10px;
-    margin: 0 1.5%;
+    /* margin: 0 1.5%; */
 }
 section {
     float: left;
