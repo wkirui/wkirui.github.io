@@ -12,3 +12,15 @@ h1 {
     color: black;
     font-size: medium;
 }
+nav {
+    float: right;
+}
+header {
+    background-color: teal;
+}
+section {
+    float: left;
+}
+aside {
+    float: right;
+}
