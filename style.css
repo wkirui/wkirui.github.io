@@ -17,7 +17,8 @@ nav {
 }
 header {
     background-color: teal;
-    height: 60px;
+    height: 100px;
+    padding-top: 30px;
 }
 section {
     float: left;
@@ -33,4 +34,6 @@ footer {
 margin-bottom: 10px;
 background-color: teal;
 clear: both;
+height: 60px;
+padding-bottom: 20px;
 }
