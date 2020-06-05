@@ -12,16 +12,27 @@ h1 {
     color: black;
     font-size: medium;
 }
-nav {
+header {
+    position: relative;
+    background-color:salmon;
+    height: 80px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /* margin: 0 1.5%; */
+}
+header h1{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+header nav {
+    position: relative;
     float: right;
     margin: 0 1.5%;
-}
-header {
-    background-color:salmon;
-    height: 100px;
-    width: 100%;
-    padding-top: 30px;
-    padding-left: 30px;
+    font-size: x-large;
+    font-weight: 400;
+    padding-right: 0px;
+    /* height: 40px; */
     /* margin: 0 1.5%; */
 }
 section {
@@ -37,6 +48,7 @@ aside {
 footer {
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
     clear: both;
     height: 60px;
@@ -44,6 +56,7 @@ footer {
     background-color: salmon;
     padding-bottom: 15px;
     padding-top: 15px;
+    padding-left: 200px;
     /* margin: 0 1.5%; */
 
 }
