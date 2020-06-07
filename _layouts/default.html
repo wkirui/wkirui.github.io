@@ -3,25 +3,29 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
-        <title>Data Science Projects</title>
+        <title>{{ page.title }}</title>
     </head>
     <body>
     <header>
-        <h1>DATA SCIENCE JOURNEY</h1>
+        <h1>{{ page.title }}</h1>
         <nav>
-            <ul>
+            <!-- <ul> -->
                 <a href="/">Home</a>
                 <a href="about.html">About</a>
                 <a href="/">Projects</a>
                 <a href="/">CV</a>
                 <a href="/">Contact</a>
-            </ul>
+            <!-- </ul> -->
         </nav>
     </header>
-    
+    <section>
+        {{ content }}
+    <aside>
+        <!-- {{ content }} -->
+    </aside>
     </body>
 
     <footer>
-        <p>&copy;2020 Wesley Kirui.All rights reserved.</p>
+        <p>Wesley Kirui. &copy; 2020. All rights reserved.</p>
     </footer>
 </html>
