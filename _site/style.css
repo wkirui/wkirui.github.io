@@ -48,7 +48,7 @@ header ul {
 }
 ul a:hover {
     background-color:salmon;
-    color: black;
+    color:blue;
 }
 header a {
     text-decoration: none;
