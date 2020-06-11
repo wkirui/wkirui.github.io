@@ -4,6 +4,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
     padding-top: 60px;
     margin: 0;
+    overflow: scroll;
     /* background-color: bisque; */
 }
 
@@ -70,13 +71,13 @@ header a {
 /* } */
 section {
     float: left;
-    width: 60%;
+    width: 75%;
     margin: 0 1.5%;
 }
 aside {
     float: right;
-    width: 30%;
-    margin: 0 1.5%;
+    width: 15%;
+    /* margin: 0 1.5%; */
 }
 footer {
     position: fixed;
