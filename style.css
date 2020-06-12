@@ -4,9 +4,19 @@ body {
     font-family: 'Times New Roman', Times, serif;
     padding-top: 60px;
     margin: 0;
-    overflow: scroll;
+    /* overflow: scroll; */
+    /* min-height: 100vh; */
     /* background-color: bisque; */
 }
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  #content-wrap {
+    padding-bottom: 60px;
+  }
 
 p {
     color: black;
@@ -79,13 +89,16 @@ aside {
     width: 15%;
     /* margin: 0 1.5%; */
 }
-footer {
-    position: fixed;
+
+
+#footer {
+    position: absolute;
     bottom: 0;
-    left: 0;
     width: 100%;
-    clear: both;
     height: 60px;
+    clear: both;
+    top: auto;
+    /* margin-top: 10px; */
     /* margin-bottom: 20px; */
     background-color: rgb(167, 163, 162);
     padding-bottom: 15px;
@@ -93,4 +106,33 @@ footer {
     padding-left: 200px;
     /* margin: 0 1.5%; */
 
+}
+.infinite-spinner {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #333;
+    margin: 60px auto;
+    
+    -webkit-animation: scaleout 1.0s infinite ease-in-out;
+    animation: scaleout 1.0s infinite ease-in-out;
+  }
+@-webkit-keyframes scaleout {
+    0% { -webkit-transform: scale(0.0) }
+    100% {
+      -webkit-transform: scale(1.0);
+      opacity: 0;
+    }
+}
+  
+@keyframes scaleout {
+    0% {
+      transform: scale(0.0);
+      -webkit-transform: scale(0.0);
+    } 100% {
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+      opacity: 0;
+    }
 }
