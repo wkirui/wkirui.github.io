@@ -1,23 +1,31 @@
 
 body {
-    background-color: white;
+    background-color:whitesmoke;
     font-family: 'Times New Roman', Times, serif;
     padding-top: 60px;
-    margin: 0;
-    /* overflow: scroll; */
-    min-height: 100vh;
+    /* padding-bottom: 60px; */
+    margin: 0 auto;
+    min-width: 980px;
+    text-align: justify;
+    /* width: 80vw; */
+    /* overflow: auto; */
+    /* min-height: 100vh; */
     /* background-color: bisque; */
 }
 
 #page-container {
     position: relative;
     min-height: 100vh;
-    clear: both;
+    width: 980px;
+    /* overflow: auto; */
+    /* width: 1000px; */
+    /* min-width: 100vw; */
+    
   }
   
-  #content-wrap {
-    padding-bottom: 60px;
-    clear: both;
+#content-wrap {
+    padding-bottom: 40px;
+    /* margin-bottom: 60px; */
   }
 
 p {
@@ -45,7 +53,7 @@ header h1{
     width: 40%;
 }
 header ul {
-    position: fixed;;
+    position: fixed;
     top: 0;
     width: 95%;
     float: right;
@@ -68,7 +76,7 @@ header a {
     color: black;
 }
 /* nav {
-    /* position: relative;
+    position: relative;
     float: right;
     height: 40px;
     width: 100%;
@@ -82,34 +90,40 @@ header a {
     margin: 0 1.5%; */
 /* } */
 section {
+    float: center;
+    width: 85vw;
+    /* margin-right: 20px; */
+    margin-left: 60px;
+    /* display:inline-block; */
+    background-color:white;
+    padding-left: 40px;
+    padding-right: 10px;
+}
+/* aside {
     float: left;
-    width: 75%;
-    margin: 0 1.5%;
-}
-aside {
-    float: right;
-    width: 15%;
-    /* margin: 0 1.5%; */
-}
+    width: 5%;
+    background-color: rgb(158, 145, 127);
+    height: 100vh;
+    /* margin: 0 1.5%;
+} */
 
 
 #footer {
     position: absolute;
     bottom: 0;
-    width: 100%;
-    height: 60px;
+    width: 1080px;
+    height: 40px;
     clear: both;
-    top: auto;
     /* margin-top: 10px; */
     /* margin-bottom: 20px; */
-    background-color: rgb(167, 163, 162);
-    padding-bottom: 15px;
-    padding-top: 15px;
+    background-color:whitesmoke;
+    padding-bottom: 10px;
+    /* padding-top: 5px; */
     padding-left: 200px;
     /* margin: 0 1.5%; */
 
 }
-.infinite-spinner {
+/* .infinite-spinner {
     display: block;
     width: 40px;
     height: 40px;
@@ -137,4 +151,4 @@ aside {
       -webkit-transform: scale(1.0);
       opacity: 0;
     }
-}
+} */
