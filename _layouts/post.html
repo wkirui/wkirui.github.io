@@ -1,0 +1,15 @@
+---
+layout: default
+title: 'Post: Wesley Kirui'
+---
+
+{% for post in post%}
+<li>
+	<h2>{{ post.title }}</h2>
+	<p class="meta">{{ post.date | date_to_string }}</p>
+
+	<div class="post">
+	{{ post.content }}
+	</div>
+</li>
+{% endfor %}

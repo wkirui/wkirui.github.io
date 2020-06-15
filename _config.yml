@@ -1,1 +1,13 @@
 # theme: jekyll-theme-leap-day
+# General Settings
+title: Wesley Kirui | Data Science
+email: kkiruiwesley@gmail.com
+description: "Welcome to my Data Science journey!"
+baseurl: ""
+url: ""
+
+# build settings
+markdown: kramdown
+plugins:
+  - jekyll-paginate
+  # - jekyll-assets

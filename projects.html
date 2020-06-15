@@ -1,0 +1,11 @@
+---
+layout: default
+title: 'Projects: Wesley Kirui'
+---
+   {% for project in site.categories.projects limit: 1 %}
+   <!-- <a href="{{project.url}}"><h2>{{ project.title }}</h2></a> -->
+   <p class="meta"> {{ project.date | date_to_string }}</p>
+   <p>{{ project.content }}</p>
+   <!-- {{ project.excerpt }} -->
+   {% endfor %}
+
