@@ -1,36 +1,38 @@
+--- 
+
+--- 
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css">
-        <title>Data Science Projects</title>
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <title>{{ site.title }}</title>
     </head>
     <body>
-    <header>
-        <h1><a href="/">DATA SCIENCE JOURNEY</a></h1>
-        <nav>
-            <ul>
-                <!-- <a href="/">Home</a> -->
-                <a href="about.html">About Me</a>
-                <a href="/">Projects</a>
-                <a href="/wesley_kirui_cv.pdf" target="_blank">CV</a>
-                <a href="/">Contacts</a>
-            </ul>
-        </nav>
-    </header>
-    <section>
-        <h2>Coming Soon!</h2>
-        <p>I will be using this site to post new Data science projects<br>
-            Looking forward to exploring different datasets,methods,ideas and discovering strange new worlds!
-        </p>
-    </section>
-    <aside>
-        <h3>Reading Notes</h3>
-        <p>Section for materials read during the week</p>
-    </aside>
+        {% include header.html %}
+        <div id="page-container">
+            <div id="content-wrap">
+                <section>
+                    <h2>Coming Soon!</h2>
+                    <p>I will be using this site to post new Data Science projects<br>
+                        Looking forward to exploring different datasets, methods, ideas and discovering strange new worlds!
+                    </p> 
+                    {% for post in site.posts limit: 3 %}
+                    <ul>
+                        <h2>{{ post.title }}</h2>
+                        <p class="meta">{{ post.date | date_to_string }}</p>
+                        <div class="post">
+                            {{ post.content }}
+                        </div>
+                    </ul>
+                    {% endfor %}
+                </section>
+            </div> 
+            {% include footer.html %}
+
+        </div>
     </body>
 
-    <footer>
-        <p>Wesley Kirui. &copy; 2020. All rights reserved.</p>
-    </footer>
 </html>
