@@ -136,6 +136,14 @@ ion-icon {
 }
 
 @media screen and (max-width: 600px) {
+    html, body{
+        height: 100vh;
+    }
+    body{
+        min-height: 100vh;
+        position: relative;
+        /* padding-bottom: 60px; */
+    }
 
     #page-container {
         position: relative;
@@ -170,7 +178,9 @@ ion-icon {
     #footer {
         position: absolute;
         bottom: 0;
-        width: 75vw;
+        left: 0;
+        right: 0;
+        width: 90vw;
         height: 60px;
         clear: both;
         background-color: whitesmoke;
