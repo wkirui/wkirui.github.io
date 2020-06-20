@@ -170,8 +170,8 @@ ion-icon {
     #footer {
         position: absolute;
         bottom: 0;
-        width: 100vw;
-        height: 60px;
+        width: 90vw;
+        /* height: 60px; */
         clear: both;
         background-color: whitesmoke;
         padding-bottom: 10px;
