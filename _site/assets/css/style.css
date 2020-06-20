@@ -54,18 +54,20 @@ h1 {
 }
 #nav-bar {
     position: absolute;
-    display: block;
+    display: flex;
+    float: right;
     right: 0;
     /* top: 5px; */
     /* bottom: 5px; */
     bottom: 0;
     height: 60px;
-    width: 30vw;
+    width: 40vw;
     background-color:salmon;
     font-size: large;
     /* font-weight: 200; */
     padding-right: 5px;
-    margin: 0 2%;
+    margin-right: 0;
+    /* margin: 0 2%; */
     word-spacing: 5px;
 }
 section {
