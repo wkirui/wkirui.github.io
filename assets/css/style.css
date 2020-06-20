@@ -147,11 +147,12 @@ ion-icon {
     } */
 
     #page-container {
-        position: relative;
+        /* position: relative; */
         min-height: 100%;
     }
     
     #content-wrap {
+        padding: 20px;
         padding-bottom: 60px;
         /* margin-left: auto; */
         /* margin-bottom: -60px; */
@@ -182,10 +183,10 @@ ion-icon {
         /* left: 0; */
         /* right: 0; */
         width: 90vw;
-        height: 50px;
+        height: 60px;
         clear: both;
         background-color: whitesmoke;
-        padding-bottom: 10px;
+        /* padding-bottom: 10px; */
         padding-left: 10vw;
         margin-top: -60px;
     }
