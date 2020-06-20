@@ -137,10 +137,10 @@ ion-icon {
 
 @media screen and (max-width: 600px) {
     html, body{
-        height: 100vh;
+        height: 100%;
     }
     body{
-        min-height: 100vh;
+        min-height: 100%;
         position: relative;
         /* padding-bottom: 60px; */
     }
