@@ -136,6 +136,20 @@ ion-icon {
 }
 
 @media screen and (max-width: 600px) {
+    body {
+        width: 100vw;
+    }
+    #page-container {
+        position: relative;
+        min-height: 100vh;
+        width: 100vw;
+    }
+    
+    #content-wrap {
+        padding-bottom: 40px;
+        margin-left: auto;
+        margin-bottom: 60px;
+    }
     #nav-bar.responsive {
         position: relative;
     }
@@ -149,12 +163,6 @@ ion-icon {
         display: block;
         text-align: left;
     }
-}
-
-@media screen and (max-width: 600px) {
-    body {
-        width: 100vw;
-    }
     section {
         position: absolute;
         margin-left: 0;
@@ -165,7 +173,7 @@ ion-icon {
     #footer {
         position: absolute;
         bottom: 0;
-        width: 80vw;
+        width: 100vw;
         height: 60px;
         clear: both;
         background-color: whitesmoke;
