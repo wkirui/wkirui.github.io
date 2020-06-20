@@ -16,7 +16,7 @@ body {
 }
 
 #content-wrap {
-    padding-bottom: 40px;
+    padding-bottom: 60px;
     margin-left: auto;
     margin-bottom: 60px;
 }
@@ -136,19 +136,16 @@ ion-icon {
 }
 
 @media screen and (max-width: 600px) {
-    body {
-        width: 100vw;
-    }
+
     #page-container {
         position: relative;
         min-height: 100vh;
-        width: 100vw;
     }
     
     #content-wrap {
-        padding-bottom: 40px;
+        padding-bottom: 60px;
         margin-left: auto;
-        margin-bottom: 60px;
+        /* margin-bottom: 60px; */
     }
     #nav-bar.responsive {
         position: relative;
