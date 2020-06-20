@@ -81,7 +81,7 @@ h1 {
 section {
     position: absolute;
     display: block;
-    text-align: justify;
+    /* text-align: justify; */
     /* margin: 60px; */
     width: 70vw;
     margin-left: 2.5vw;
@@ -137,12 +137,12 @@ ion-icon {
 
 @media screen and (max-width: 600px) {
     html, body{
-        height: 100vh;
+        height: 100%;
         margin: 0;
     }
 
     #page-container {
-        min-height: 100vh;
+        min-height: 100%;
     }
     
     #content-wrap {
@@ -150,7 +150,7 @@ ion-icon {
         /* padding: 20px; */
         /* padding-bottom: 60px; */
         /* margin-left: auto; */
-        margin-bottom: -60px;
+        margin-bottom: 60px;
     }
     #nav-bar.responsive {
         position: relative;
@@ -183,7 +183,7 @@ ion-icon {
         clear: both;
         background-color: whitesmoke;
         padding-bottom: 10px;
-        padding-left: 10vw;
-        margin-top: -60px;
+        padding-left: 5vw;
+        margin-top: 60px;
     }
 }
