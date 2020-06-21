@@ -144,7 +144,7 @@ ion-icon {
     #page-container {
         min-height: 100vh;
         position: relative;
-        display: block;
+        /* display: block; */
         overflow: hidden;
 
     }
