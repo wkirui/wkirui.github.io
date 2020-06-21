@@ -153,17 +153,18 @@ ion-icon {
         position: relative;
         display: block;
         overflow: hidden;
+        padding-bottom: 60px;
 
     }
     
-    #content-wrap {
+    /* #content-wrap {
         position: relative;
         padding-bottom: 60px;
         display: block;
         overflow: hidden;
         min-height: 100vh;
-        /* margin-bottom: 60px; */
-    }
+        margin-bottom: 60px;
+    } */
     #nav-bar.responsive {
         position: relative;
     }
@@ -193,7 +194,7 @@ ion-icon {
         height: 60px;
         clear: both;
         background-color: whitesmoke;
-        padding-bottom: 10px;
+        /* padding-bottom: 10px; */
         padding-left: 5vw;
     }
 }
