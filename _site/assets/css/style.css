@@ -168,6 +168,7 @@ ion-icon {
     }
     section {
         position: absolute;
+        display: block;
         margin-left: 2px;
         margin-right: 2px;
         width: 95vw;
