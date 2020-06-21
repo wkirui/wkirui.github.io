@@ -145,7 +145,7 @@ ion-icon {
         min-height: 100vh;
         position: relative;
         display: block;
-        overflow: hidden;
+        /* overflow: hidden; */
 
     }
     
@@ -169,6 +169,7 @@ ion-icon {
     section {
         position: absolute;
         margin-left: 2px;
+        margin-right: 2px;
         width: 95vw;
         padding-left: 5px;
         padding-right: 5px;
