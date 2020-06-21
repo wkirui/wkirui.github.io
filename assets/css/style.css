@@ -144,14 +144,14 @@ ion-icon {
     #page-container {
         min-height: 100vh;
         position: relative;
-        /* display: block; */
+        display: block;
         overflow: hidden;
 
     }
     
     #content-wrap {
         padding-bottom: 60px;
-        /* margin-bottom: 60px; */
+        margin-bottom: 60px;
     }
     #nav-bar.responsive {
         position: relative;
@@ -177,7 +177,7 @@ ion-icon {
     #footer {
         position: absolute;
         bottom: 0;
-        width: 100%;
+        width: 95vw;
         height: 60px;
         clear: both;
         background-color: whitesmoke;
