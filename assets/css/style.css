@@ -136,7 +136,7 @@ ion-icon {
 }
 
 @media screen and (max-width: 600px) {
-    html, body{
+    body{
         height: 100vh;
         margin: 0;
     }
