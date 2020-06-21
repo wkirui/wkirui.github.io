@@ -185,6 +185,7 @@ ion-icon {
         width: 95vw;
         padding-left: 5px;
         padding-right: 5px;
+        padding-bottom: 60px;
     }
     #footer {
         position: absolute;
