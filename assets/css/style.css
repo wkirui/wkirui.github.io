@@ -151,7 +151,7 @@ ion-icon {
     
     #content-wrap {
         padding-bottom: 60px;
-        margin-bottom: 60px;
+        /* margin-bottom: 60px; */
     }
     #nav-bar.responsive {
         position: relative;
