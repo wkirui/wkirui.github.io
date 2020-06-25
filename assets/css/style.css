@@ -142,7 +142,11 @@ ion-icon {
 }
 
 @media screen and (max-width: 600px) {
-    html,body{
+    html{
+        overflow-x: hidden;
+        height: 100%;
+    }
+    body{
         height: 100%;
         position: relative;
     }
