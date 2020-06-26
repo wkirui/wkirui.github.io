@@ -171,6 +171,8 @@ ion-icon {
         padding-bottom: 60px;
         display: block;
         overflow: hidden;
+        margin-left: 2px;
+        margin-right: 2px;
         min-height: 100vh;
         min-width: 100vw;
         /* margin-bottom: 60px; */
