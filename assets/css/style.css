@@ -20,7 +20,8 @@ body {
 
 #content-wrap {
     padding-bottom: 60px;
-    margin-left: auto;
+    margin-left: 10vw;
+    margin-right: 10vw;
     margin-bottom: 60px;
     overflow: hidden;
     min-height: 100vh;
@@ -38,28 +39,33 @@ h1 {
 
 #header {
     position: absolute;
-    background-color: salmon;
+    background-color:lightseagreen;
     height: 60px;
     width: 100vw;
     top: 0;
     left: 0;
 }
 
-#header h1 {
-    padding-left: 2vw;
-    padding-top: 10px;
-    padding-bottom: 10px;
+#header h3 {
+    padding-left: 4vw;
+    /* padding-top: 10px; */
+    padding-bottom: 30px;
     width: 40vw;
+    font-size: large;
+    word-spacing: 5px;
 }
-
-#nav-bar ul a:hover {
-    background-color: salmon;
-    color: blue;
-}
-
 #header a {
     text-decoration: none;
     color: black;
+}
+#header a:hover{
+    /* background-color: lightseagreen; */
+    color:blue;
+}
+
+#nav-bar ul a:hover {
+    background-color:lightseagreen;
+    color: blue;
 }
 
 #nav-bar {
@@ -74,7 +80,7 @@ h1 {
     bottom: 0;
     height: 60px;
     width: 40vw;
-    background-color: salmon;
+    background-color:lightseagreen;
     font-size: large;
     /* font-weight: 200; */
     padding-right: 5px;
@@ -89,7 +95,7 @@ section {
     /* text-align: justify; */
     /* margin: 60px; */
     width: 70vw;
-    margin-left: 2.5vw;
+    /* margin-left: 2.5vw; */
     /* margin-right:15px; */
     background-color: white;
     padding-left: 10px;
@@ -138,7 +144,7 @@ section {
 
 ion-icon {
     font-size: 40px;
-    color: salmon;
+    color:lightseagreen;
 }
 
 @media screen and (max-width: 600px) {
