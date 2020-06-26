@@ -170,11 +170,11 @@ ion-icon {
         position: relative;
         padding-bottom: 60px;
         display: block;
-        overflow: hidden;
-        margin-left: 2px;
-        margin-right: 2px;
+        /* overflow: hidden; */
+        margin-left: 2vw;
+        margin-right: 2vw;
         min-height: 100vh;
-        min-width: 100vw;
+        /* min-width: 100vw; */
         /* margin-bottom: 60px; */
     }
     #nav-bar.responsive {
@@ -196,8 +196,8 @@ ion-icon {
         margin-left: 2px;
         margin-right: 2px;
         width: 95vw;
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 1px;
+        padding-right: 1px;
         padding-bottom: 60px;
     }
     #footer {
