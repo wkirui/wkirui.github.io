@@ -172,6 +172,7 @@ ion-icon {
         display: block;
         overflow: hidden;
         min-height: 100vh;
+        min-width: 100vw;
         /* margin-bottom: 60px; */
     }
     #nav-bar.responsive {
