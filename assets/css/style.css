@@ -206,10 +206,11 @@ ion-icon {
         padding-right: 1px;
         padding-bottom: 60px;
     }
-    img[src*='#center'] { 
-        display: block;
-        margin: auto;
-    }
+    img {
+        width: auto ;
+        max-width: 100% ;
+        height: auto ;
+      }
     #footer {
         position: absolute;
         bottom: 0;
