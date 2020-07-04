@@ -14,9 +14,7 @@ Since we're interested in apartments for rent we navigate to [houses-apartments-
 ![page image](/assets/img/page_list_example.png)
 
 This gives us an idea of how to get the data. Inspecting the html page we can see how the html tags are laid out. Each advert is inside this div wrapper
-```html
-<div class='qa-advert-listing advert-listing'></div>
-```
+<script src="https://gist.github.com/wkirui/6cf9cb457bc1ca934d4d796d71f657ef.js"></script>
 as shown here
 ![ad_wrapper](/assets/img/url_wrapper.png)
 
