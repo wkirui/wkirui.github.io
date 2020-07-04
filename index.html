@@ -17,21 +17,23 @@
     <div id="page-container">
         <div id="content-wrap">
             <section>
-                <h2>Coming Soon!</h2>
+             <!--   <h2>Coming Soon!</h2>
                 <p>I will be using this site to post new Data Science projects<br>
                     Looking forward to exploring different datasets, methods, ideas and discovering strange new worlds!
-                </p>
-                <!-- {% for post in site.posts limit: 3 %}
-                <ul>
+                </p> -->
+                {% for post in site.categories.posts limit: 3 %}
+                    <p class="meta">{{ post.date | date: "%B %Y"  }}</p>
+                    {{ post.content }}
+                <!-- <ul>
                     <a href="{{post.url}}">
-                        <h2>{{ post.title }}</h2>
+                        <h1>{{ post.title }}</h1>
                     </a>
                     <p class="meta">{{ post.date | date_to_string }}</p>
                     <div class="post">
                         {{ post.content }}
                     </div>
-                </ul>
-                {% endfor %} -->
+                </ul> -->
+                {% endfor %}
             </section>
         </div>
         {% include footer.html %}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <title>Data Collection & Processing</title>
+    </head>
+    <body>
+        
+<div id="header">
+    <h3><a href="/#">Wesley Kirui</a></h3>
+    <div id="nav-bar">
+        <ul>
+            <!-- <a href="/#">Home</a> -->
+            <a href="/about.html">About Me</a>
+            <a href="/projects.html">Projects</a>
+            <a href="/wesley_kirui_cv.pdf" target="_blank">CV</a>
+        </ul>
+    </div>
+</div>
+        <div id="page-container">
+            <div id="content-wrap">
+                <section>
+                    <h2 id="data-collection--processing"><center>Data Collection &amp; Processing</center></h2>
+<h4 id="introduction">Introduction</h4>
+<p>This an analysis on trends in rent prices across major towns in Kenya. The analysis will check if there is consistency in pricing. Is it possible that rates are higher in Mombasa and Nairobi but lower in other towns like Kilifi and Nakuru?</p>
+<h4 id="web-page-analysis">Web Page Analysis</h4>
+<p>I scraped the data from the online classified ads platform <a href="https://jiji.co.ke">jiji.co.ke</a> which has a collections of items on sale such as electronics, cars, properties, jobs and services.
+Since we’re interested in apartments for rent we navigate to <a href="https://jiji.co.ke/houses-apartments-for-rent">houses-apartments-for-rent</a> where we can see all the listings. It’s possible to customize the link using <strong>location</strong> as a filter. From this page we can see that each ad has an image, title, description, location and price as shown below</p>
+
+<p><img src="/assets/img/page_list_example.png" alt="page image" /></p>
+
+<p>This gives us an idea of how to get the data. Inspecting the html page we can see how the html tags are laid out. Each advert is inside this div wrapper</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'qa-advert-listing advert-listing'</span><span class="nt">&gt;&lt;/div&gt;</span>
+</code></pre></div></div>
+<p>as shown here
+<img src="/assets/img/url_wrapper.png" alt="ad_wrapper" /></p>
+
+<h4 id="data-processing-tools">Data Processing Tools</h4>
+<p>I used <a href="https://www.selenium.dev/documentation/en/">Selenium</a> and <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-beautiful-soup">Beautiful Soup</a> to scrape the data from the website. Both can be installed using pip. Installing a webdriver to automate your browser can be a bit tricky. You can read more about the installation process <a href="https://www.selenium.dev/documentation/en/webdriver/">here</a> and it should be the same version as your default browser. In my case, I used Chrome version 83.<br />
+I used pandas, numpy,matplotlib and seaborn for data processing and visualization.</p>
+
+<p>Once we have all the packages installed, we can load them to the working environment.
+<script src="https://gist.github.com/wkirui/6d329d4864e66c515fceb72e3e9b44e3.js"></script></p>
+<h4 id="data-collection--processing-1">Data Collection &amp; Processing</h4>
+<p>Once all the packages are loaded, we can create an instance of the web browser and use it to open the properties adress url. I customized the browser for each town to make downloading the data easier. I then used BeautifulSoup to extract data from the loaded webpage.
+<script src="https://gist.github.com/wkirui/1f86d0a8248c1d9c4bc7a1ab7f3f5e9f.js"></script>
+With the BeautifulSoup instance of the page, we can start extracting data inside the div tags. I was able to extract url_ids, locations,prices,titles and decriptions for the ads. The following example shows how to get a list of prices from a div tag
+<script src="https://gist.github.com/wkirui/db062705cf8333ae906f9c8a2f44d10b.js"></script></p>
+
+<p>Then we create a dataframe using the downloaded data
+<script src="https://gist.github.com/wkirui/d4c3831722a44d2f583d56b39763433c.js"></script></p>
+
+<p>The resulting dataframe will look like this:</p>
+
+<p><img src="/assets/img/df_sample.png#center" alt="df_sample" /></p>
+
+<p>The next step is to clean up the data. First we extract the number of bedrooms from their titles  their descriptions then we remove the currency notation from the prices and convert them into intetger values.</p>
+
+<p>I found the nifty trick below useful in generating the number of bedrooms from the title column: create a list of bedrooms, convert it to dataframe and then concatenate it back to the main dataframe. 
+<script src="https://gist.github.com/wkirui/ddb3a38b74e8c9606017eb6ac60e7c4b.js"></script></p>
+
+<p>This combined with text search made it possible to generate bedrooms for ~ 80% of the listings. Some listings had spelling errors and needed to be coded manually.</p>
+
+                </section>
+            </div>
+            <footer id="footer">
+    <p>Wesley Kirui. &copy; 2020. All rights reserved.</p>
+</footer>
+        </div>
+
+        <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
+    </body>
+
+</html>

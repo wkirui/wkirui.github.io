@@ -20,8 +20,8 @@ body {
 
 #content-wrap {
     padding-bottom: 60px;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
     margin-bottom: 60px;
     overflow: hidden;
     min-height: 100vh;
@@ -90,11 +90,11 @@ h1 {
 }
 
 section {
-    position: absolute;
+    position: relative;
     display: block;
     /* text-align: justify; */
     /* margin: 60px; */
-    width: 70vw;
+    width: 60vw;
     /* margin-left: 2.5vw; */
     /* margin-right:15px; */
     background-color: white;
@@ -105,6 +105,12 @@ section {
     padding-right: 20px;
     padding-bottom: 20px;
     padding-top: 10px; */
+    /* word-spacing: 5px; */
+    word-break: keep-all;
+}
+img[src*='#center'] { 
+    display: block;
+    margin: auto;
 }
 
 #footer {
@@ -199,6 +205,10 @@ ion-icon {
         padding-left: 1px;
         padding-right: 1px;
         padding-bottom: 60px;
+    }
+    img[src*='#center'] { 
+        display: block;
+        margin: auto;
     }
     #footer {
         position: absolute;
