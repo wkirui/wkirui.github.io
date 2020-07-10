@@ -37,7 +37,7 @@ The resulting dataframe will look like this:
 
 ![df_sample](/assets/img/df_sample.png#center)
 
-The next step is to clean up the data. First we extract the number of bedrooms from the listings' titles and descriptions then we remove the currency notation from the prices and convert them into intetger values.
+The next step is to clean up the data. First we extract the number of bedrooms from the listings' titles and descriptions then we remove the currency notation from the prices and convert them into integer values.
 
 I found the nifty trick below useful in generating the number of bedrooms from the title column: create a list of bedrooms, convert it to dataframe and then concatenate it back to the main dataframe. 
 <script src="https://gist.github.com/wkirui/ddb3a38b74e8c9606017eb6ac60e7c4b.js"></script>
