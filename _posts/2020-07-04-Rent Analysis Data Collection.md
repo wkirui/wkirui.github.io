@@ -3,10 +3,12 @@ layout : default
 title : 'Data Collection & Processing'
 date : '2020-07-05 00:45:00 +0300'
 categories: posts
+excerpt: 'This an analysis on trends in rent prices across major towns in Kenya. The analysis will check if there is consistency in pricing across these towns. How do prices in Mombasa compare to those in Nairobi?'
 ---
 ## <center>Data Collection & Processing</center>
 #### Introduction
 This an analysis on trends in rent prices across major towns in Kenya. The analysis will check if there is consistency in pricing. Is it possible that rates are higher in Mombasa and Nairobi but lower in other towns like Kilifi and Nakuru?
+
 #### Web Page Analysis
 I scraped the data from the online classified ads platform [jiji.co.ke](https://jiji.co.ke) which has a collections of items on sale such as electronics, cars, properties, jobs and services.
 Since we're interested in apartments for rent we navigate to [houses-apartments-for-rent](https://jiji.co.ke/houses-apartments-for-rent) where we can see all the listings. It's possible to customize the link using **location** as a filter. From this page we can see that each ad has an image, title, description, location and price as shown below
