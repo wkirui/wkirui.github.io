@@ -16,3 +16,5 @@ Next I use pandas and numpy libraries in python to clean the data
 Where is the data stored? I believe local csv files will do the job in this case. However I will look at how to store this data in a PostgreSQL database. I will look at how to create data model in a postgresql database and write a csv file into the database. From the database, we can start writing queries to generate summaries and distributions.
 4. **Data Visualization :**
 The fun part - I will look at trends across major towns. How do prices for instance in Mombasa compare to those in Nairobi? I will use different visualization tools such as matplotlib, seaborn and dash plotly. Dash plotly is a cool tool for generating interractive plots. I will also look at how dash plotly can be intergrated into a flask app for deployment on Heroku.
+
+Here is the [link](https://rentanalysis-app.herokuapp.com/) to the final web app deployed on Heroku.
