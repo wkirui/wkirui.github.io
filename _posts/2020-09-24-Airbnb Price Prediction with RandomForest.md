@@ -20,7 +20,7 @@ In the code above, we imported:
 - Matplotlib & [Seaborn](https://seaborn.pydata.org/) for visualizing our data
 - Train_test_split for spliting our data into sets for training and testing our model
 - RandomForestRegressor for creating a regression model. This is a supervised machine learning task and RandomForest is a good candidate for it. Based on the performance of our model in predicting apartment prices, we might also try other algorithms for comparison
-- Mean_squared_error for measuring the performance of our model
+- Mean_squared_error and mean_absolute_error for measuring the performance of our model
 
 Let's take a quick look at the shape and overview of our data.<br>
 As shown below, we have 20432 listings and 74 columns (features).
