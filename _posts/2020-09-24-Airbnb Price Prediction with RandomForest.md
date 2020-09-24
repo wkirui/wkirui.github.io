@@ -5,7 +5,7 @@ date : '2020-09-24 10:10:00 +0300'
 categories: posts
 excerpt: 'Can we create a general model to predict the housing prices for a given city? In this analysis, I look at the prices for listings in Berlin Germany and create a model to predict the results.'
 ---
-# <center>Machine Learning</center>
+# <center>Machine Learning using RandomForestRegression</center>
 ### Introduction
 In this project I use Airbnb data to analyze their price distribution and to create a machine learning model that can be used to predict the price of a given listing.
 Airbnb data for major cities and towns around the world is publicly available at [Inside Airbnb](http://insideairbnb.com/) project. For this analysis, I work with the data for Berlin, Germany.
@@ -25,7 +25,7 @@ Let's take a quick look at the shape and overview of our data.<br>
 As shown below, we have 20432 listings and 74 columns (features).
 ![data overview](/assets/img/listings_top_rows.png#center)
 
-### 2. Data Processing
+#### 2. Data Processing
 Let's remove the currency notation from the prices using this function
 <script src="https://gist.github.com/wkirui/af998d2711e12cf9687244e493d019c5.js"></script>
 Once prices are cleaned up we can look at their distribution
@@ -38,7 +38,7 @@ We can make the following observations:
 - Only 4.98% of the listings cost more than the 95th percentile price ($155)
 - Only 0.4% of the listings cost $500 or more
 
-### 3. Exploratory Data Analysis
+#### 3. Exploratory Data Analysis
 Let's plot the price distribution
 <script src="https://gist.github.com/wkirui/e32867aceddf89a61428b6823f3ce5f6.js"></script>
 ![price distribution](/assets/img/airbnb_price_distribution.png) | ![price less than $500](/assets/img/airbnb_prices_less_than_500.png)
@@ -64,6 +64,7 @@ Using the following function, we calculate the [Great-circle Distance](https://e
 ##### c) Maximum number of guests
 - As expected, price increases with the number of guests
 ![price v guests](/assets/img/price_guest_dist.png)
+
 ##### d) Room Type
 - It's cheaper if you shared the room with the host
 - Hotel rooms are the most expensive on average
@@ -74,9 +75,7 @@ Using the following function, we calculate the [Great-circle Distance](https://e
 - Reinickendorf has the the cheapest apartments
 ![price v neighbourhood](/assets/img/price_neighbourhood_dist.png)
 
-
-
-### 4. Feature Selection
+#### 4. Feature Selection
 We have looked at how some of the features affect pices. In this section, we are going to determine which other features in our dataset greatly affect the price of renting an Airbnb apartment.
 ##### i) Missing Values
 First let's check which columns have the highest number of values missing
@@ -97,7 +96,7 @@ Now we need to determine the best features to use in our model. We will use a Ra
 Here are the top 15 features
 ![missing values table](/assets/img/pct_missing_values.png)
 
-### 5. Model Selection
+#### 5. Model Selection
 ##### a) Fit the model
 Using the top features, we can train our final model. We select top **n** features or we select features whose scores are above a certain threshold then we train several models to compare with the results
 As shown below, we selected 50 features to the model
