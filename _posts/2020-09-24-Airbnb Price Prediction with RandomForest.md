@@ -95,12 +95,13 @@ This table shows the top ten columns with the highest number of missing values<b
 Now we need to determine the best features to use in our model. We will use a RandomForestRegressor to fit our feaures and the target variable then we calculate the feature importances. The code below shows how to find important features
 <script src="https://gist.github.com/wkirui/f1eebb662469a9eaf6bbd34894582094.js"></script>
 
-Here are the top 15 features
-![missing values table](/assets/img/pct_missing_values.png)
+Here are the top 15 features and their scores
+
+![missing values table](/assets/img/top_features_list.png)
 
 #### 5. Model Selection
 ##### a) Fit the model
-Using the top features, we can train our final model. We select top **n** features or we select features whose scores are above a certain threshold then we train several models to compare with the results
+Using the top features, we can train our final model. We either select top **n** features or we select features with scores  above a certain threshold then we train several models to compare performances<br>
 As shown below, we selected 50 features to the model
 <script src="https://gist.github.com/wkirui/e1fbfebdfc82c2dcbfd421bee5eea0ad.js"></script>
 
@@ -108,7 +109,7 @@ As shown below, we selected 50 features to the model
 Once our model is trained, we use it to make predictions
 <script src="https://gist.github.com/wkirui/4a2b40e9ae8312aeb8b8285bf7bb708a.js"></script>
 
-- Then we score the performance of our model using both the **mean squared errors** & the **mean absolute error**
+- Then we score the performance of our model using both the **mean squared errors** and the **mean absolute error**
 - The model returned an R^2 of 5.3% which means it's not doing a great job at explaining the variance in our data
 - We also have a RMSE (Root Mean Squared Error) of 147.5 which indicates that in a given prediction, our model is missing the prediction by $147
 - Similarly our MAE (Mean Absolute Error) is 25.5
