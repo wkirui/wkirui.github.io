@@ -12,7 +12,8 @@ Airbnb data for major cities and towns around the world is publicly available at
 
 #### 1. Overview
 First, we download the data from this [link](http://insideairbnb.com/get-the-data.html). The file **listings.csv.gz** has all the data that we need but the other files are also useful for further analysis and visualization.
-Once we have the data we need, we can start our exploratory analysis. First, we import the modules and load the data as shown here.
+Once we have the data we need, we can start our exploratory analysis.<br>
+Let's import the modules and load the data as shown here.
 <script src="https://gist.github.com/wkirui/fa6ecf98dd4cb57dacb2676b2b709c21.js"></script>
 In the code above, we imported:
 - Pandas and Numpy for data processing
@@ -66,7 +67,7 @@ Using the following function, we calculate the [Great-circle Distance](https://e
 ![price v guests](/assets/img/price_guest_dist.png)
 
 ##### d) Room Type
-- It's cheaper if you shared the room with the host
+- It's cheaper if you shared the apartment with the host
 - Hotel rooms are the most expensive on average
 ![price v room type](/assets/img/price_room_type_dist.png)
 
@@ -83,11 +84,12 @@ First let's check which columns have the highest number of values missing
 
 This table shows the top ten columns with the highest number of missing values<br>
 ![missing values table](/assets/img/pct_missing_values.png)
+
 - We have another column named *bathrooms_text* so we shouldn't worry about *bathrooms*
 - We have 9 columns with more than 30% values missing. We'll drop these columns
 - We also have 14 columns with between 5% and 30% values missing
 - For integer columns with missing values, we impute the missing values using the median strategy. In this case, we fill the missing values in a column with the calculated median for that column
-- For categorical columns, we will add an 'Uknown' class to the data
+- For categorical columns, we will add an 'uknown' class to the data
 
 ##### ii) Feature Importance
 Now we need to determine the best features to use in our model. We will use a RandomForestRegressor to fit our feaures and the target variable then we calculate the feature importances. The code below shows how to find important features
