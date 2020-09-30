@@ -1,6 +1,6 @@
 ---
 layout : default
-title : 'Data Collection & Processing'
+title : 'Web Scraping Rent Data Using Selenium In Python'
 date : '2020-07-05 00:45:00 +0300'
 categories: posts
 excerpt: 'This an analysis on trends in rent prices across major towns in Kenya. The analysis will check if there is consistency in pricing across these towns. How do prices in Mombasa compare to those in Nairobi?'

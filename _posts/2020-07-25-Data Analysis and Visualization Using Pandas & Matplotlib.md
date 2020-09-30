@@ -1,6 +1,6 @@
 ---
 layout : default
-title : 'Data Analysis & Visualization'
+title : 'Data Analysis and Visualization Using Pandas & Matplotlib'
 date : '2020-07-25 23:47:00 +0300'
 categories: posts
 excerpt: 'In this second part of rent data analysis I look at trends in the data collected, clean up any major outliers and visualize the results.'
