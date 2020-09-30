@@ -13,7 +13,7 @@ In the last article, we created a RandomForest Regression model that can be used
 #### 1. Overview
 [Streamlit](https://www.streamlit.io/) is an open source tool for building and deploying data application. It makes sharing of prototypes and analysis results very easy. To get started, follow the documentation [here](https://docs.streamlit.io/en/stable/).
 
-### 2. Initialize Git
+#### 2. Initialize Git
 The first step is to create a git repository in your working directory. The working directory could have the following files:
 - app.py - python code with the analysis & predictions
 - requirements.txt - a text file contained all the installed packages/modules
