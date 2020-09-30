@@ -46,7 +46,8 @@ heroku login
 ```
 This will open a browser window to login into your account.
 
-Then create a heroku app with the following code. This will create a random name by default which you can change later.
+#### 5. Create an App
+Use the following code to create an ap. This will assign a random name by default which you can change later.
 ```
 heroku create
 ```
