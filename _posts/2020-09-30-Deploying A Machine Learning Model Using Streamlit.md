@@ -66,7 +66,7 @@ To view you app, type **heroku open**
 
 To rename the app, use **heroku apps:rename new_app_name**. If you are using the repository for more than one app, use **heroku apps:rename --app old_name new_name**
 
-Note:
+**Note:**
 - If you're getting version errors during deployment, change the version of the package to the latest one provided in the terminal
 - There is a usage limit of 500MB. The app should have enough RAM in order to run, so make sure that the total file size is way below the limit.
 
