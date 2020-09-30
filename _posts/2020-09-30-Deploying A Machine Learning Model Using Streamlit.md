@@ -8,7 +8,9 @@ excerpt: We have trained a machine learning model and created an app where every
 # <center>Deploying a Streamlit App</center>
 
 ### Introduction
-In the last article, we created a RandomForest Regression model that can be used to predict Airbnb apartment prices. The next natural step after creating a machine learning model is to share the results as well as the model with the users. Let's look at some of the quick steps on how to deploy a model on Heroku.
+In the last article, we created a RandomForest Regression model that can be used to predict Airbnb apartment prices. The next natural step after creating a machine learning model is to share the results as well as the model with the users. Here is the [link](https://rf-price-prediction.herokuapp.com/) to my app on Heroku.
+
+Let's look at some of the quick steps on how to deploy a model on Heroku.
 
 #### 1. Overview
 [Streamlit](https://www.streamlit.io/) is an open source tool for building and deploying data application. It makes sharing of prototypes and analysis results very easy. To get started, follow the documentation [here](https://docs.streamlit.io/en/stable/).
