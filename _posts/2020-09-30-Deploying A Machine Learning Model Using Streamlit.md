@@ -1,6 +1,6 @@
 ---
 layout : default
-title : 'Deploying A Machine Learning Model Using Streamlit'
+title : 'Deploying A Machine Learning Model Using Streamlit & Heroku'
 date : '2020-09-30 22:30:00 +0300'
 categories: posts
 excerpt: We have trained a machine learning model and created an app where everyone can play around with the data and make a few predictions with it. How do we make this app available on the web? In this article I look at how a streamlit app can be deployed on Heroku.
@@ -16,9 +16,9 @@ In the last article, we created a RandomForest Regression model that can be used
 #### 2. Initialize Git
 The first step is to create a git repository in your working directory. The working directory could have the following files:
 - app.py - python code with the analysis & predictions
-- requirements.txt - a text file contained all the installed packages/modules
+- requirements.txt - a text file containing all the installed packages/modules
 - env - a virtual environment for your project
-- .gitignore - a git file to for files not to be tracked
+- .gitignore - a git file with files to ignore
 - trained_models/ (optional) - a folder to store your trained models/prediction results
 
 #### 3. Create Procfile & Setup.sh
@@ -44,7 +44,7 @@ heroku login
 ```
 This will open a browser window to login into your account.
 
-Then create a heroku app with. This will create a random name by default which you can change later.
+Then create a heroku app with the following code. This will create a random name by default which you can change later.
 ```
 heroku create
 ```
@@ -62,6 +62,7 @@ heroku ps:scale web=1
 To view you app, type **heroku open**
 
 To rename the app, use **heroku apps:rename new_app_name**. If you are using the repository for more than one app, use **heroku apps:rename --app old_name new_name**
+
 Note:
 - If you're getting version errors during deployment, change the version of the package to the latest one provided in the terminal
 - There is a usage limit of 500MB. The app should have enough RAM in order to run, so make sure that the total file size is way below the limit.
