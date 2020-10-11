@@ -33,9 +33,15 @@ Next, we upload the csv files to the same working directory as our python code i
 We can now train our deep learning model using fastai's learner library which provides a nice and easy to use wrapper for [Pytorch](https://pytorch.org/) library for machine learning.
 The following code shows how we train our convolutional neural network (cnn) using fastai. 
 <script src="https://gist.github.com/wkirui/35827917bbdd24f86b59bd8ede002d7d.js"></script>
-As shown below, our models accuacy is 72%.
+Running the code above, we get a model accuacy of 72% as shown below
 ![](/assets/img/crop_model_results_v1.png "crop model v1")
 
-For this analysis, we created the categories for maize and beans farming. Suppose we want to know which of the farmers planted which type of crops. Working in rural setting it's not unheard of farmer a farmer to receive inputs for one crop and plant another crop. This could be either due to fraud or they are not quite confident with the conditions of the planting season. Some farmers have a gut feeling on when they should plant. So if a farmer had received inputs for maize to plant in say September and they feel that the crop will do well if they planting in January, a farmer can plant a short-term crop in order to remain in compliance. This ofcourse means they are compliant and will be submitting photos of the crop that they just planted. Then plant maize later in January. Technically such a farmer is not committing fraud but the risk of adverse weather effects might ruin their potential harvest. This could lead to further default down the road.
-In other instance, suppose a farmer wants to use their crops to secure a loan. In order to try this, you have to create some confidence level on how much to trust the performance of the crop. This can open another line of credit for the farmer that they can use while they are expecting the crops to mature. This is actually an interesting idea. In this instance, you can estimate crop health and sort of rate the perfomance in a scale say 9/10 and above means the crop will do well. This will make it possible for a farmer to engage in farming as a business.
+Our model accuracy of 72% is probably not strong enough to convince management that we have a good handle on detecting fraud cases on the farms. 
+The management knows that there are some edge cases where a farmer received the correct inputs but failed to plant because of one reason or another. Examples: 
+- The farmer has a strong believe that the planting season is not right and will have to wait a bit longer. They believe that by planting a short term crop now they will be ready to plant maize at harvest.
+- The farmer already had another crop on the shamba such as beans that they will have to harvest first before planting
 
+Lucky for us, fastai has a nice [image cleaner](https://fastai1.fast.ai/widgets.image_cleaner.html) that we can use to delete those images that our model wasn't sure about.
+<script src="https://gist.github.com/wkirui/f04387342963bffe0d5603d8032ba433.js"></script>
+
+Once we remove any images we do not want, our model accuracry increased to 78%.
