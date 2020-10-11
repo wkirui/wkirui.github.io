@@ -67,4 +67,4 @@ As shown below, it's quite difficult to determine if the farm contains beans.
 Lucky for us, fastai has a nice [image cleaner](https://fastai1.fast.ai/widgets.image_cleaner.html) that we can use to delete those images that our model wasn't sure about.
 <script src="https://gist.github.com/wkirui/f04387342963bffe0d5603d8032ba433.js"></script>
 
-Deleting those poorly labeled images and training the model again our model accuracy increases to 78%. This is close enough to get a buy-in from management. Now we need to further tweak our model for better perfomance when we start receiving images from the field.
+Deleting poorly labeled images from data and training the model again increases our accuracy to 78%. This is close enough to get a buy-in from management. Now we need to further tweak our model for better perfomance when we start receiving images from the field.
