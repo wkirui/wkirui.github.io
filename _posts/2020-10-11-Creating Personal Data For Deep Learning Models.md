@@ -3,7 +3,7 @@ layout : default
 title : 'Creating Personal Data For Deep Learning Models'
 date : '2020-10-11 16:00:00 +0300'
 categories: posts
-excerpt: 'Deep Learning is an exciting field in machine learning. Through deep learning, data scientists have access to a variety of tools to play around with datasets and to test different hypotheses. For instance if we wanted to quickly create  deep learning model to classify car types, we will first search online for any publicly available datasets such as [Standford's cars dataset](https://ai.stanford.edu/~jkrause/cars/car_dataset.html#:~:text=Overview,or%202012%20BMW%20M3%20coupe.). However if you are working on an edge case problem you won't have readily available dataset for easy download. In this article, I look at one of the ways to generate data for your deep learning projects'
+excerpt: Deep Learning is an exciting field in machine learning. Through deep learning, data scientists have access to a variety of tools to play around with datasets and to test different hypotheses. For instance if we wanted to quickly create  deep learning model to classify car types, we will first search online for any publicly available datasets such as Standford's cars dataset (https://ai.stanford.edu/~jkrause/cars/car_dataset.html). However if you are working on an edge case problem you won't have readily available dataset for easy download. In this article, I look at one of the ways to generate data for your deep learning projects
 ---
 # <center>Creating Personal Data for Deep Learning</center>
 
