@@ -15,10 +15,15 @@ Most of the startups in Kenya in one way or another collect data from the field 
 Photos can also be used to estimate crop growth rates across different regions in order to calculate production estimates.
 
 #### 2. Data Generation
+In this analysis, we will create a deep learning model to determin the type of crop that a farmer planted on the farm. Suppose we're working in a region that has potential to grow maize and beans well and we are a startup company that supplies maize inputs such as seeds and fertilizer to farmers in this region. Each planting season we drive around with a truck delivering inputs to farmers and a few weeks after deliveries our field team visits them to make sure that they have followed planting guidelines and to take photos of their shambas.
+As data scientists on the team we propose that we can use deep learning to confirm whether the farmers actually planted the maize that we delivered. 
+Since we do not yet have any photos in our database, we are going to use google images to create a prototype model that we can share with the management. 
+We search for **maize farming in Kenya** as shown here
+![](/assets/img/maize_search_ke.png "maize search image")
 
-Using google images, the process is quite straight forward. You search for the categories you want to perform deep learning on. Then scroll down the browser window until you have a good number of images to play around with. In order to download the images, right click on the browser and select inspect or command+option+I in Mac. This opens up the inspect tool of your browser and you can enter the code below to download the images. 
+Then we scroll down the browser window until we have a good number of images to play around with. In order to download the images, right click on the browser and select inspect or command+option+I in Mac if using chrome. Then copy and paste the following code in the console and press enter. This will create a csv file with urls for the loaded images in a pop up window. Please note you might have to disable adblock for the download to work. Then repeat the same process for beans farming.
 
-```python
+```javascript
 urls=Array.from(document.querySelectorAll('.rg_i')).map(el=> el.hasAttribute('data-src')?el.getAttribute('data-src'):el.getAttribute('data-iurl'));
 window.open('data:text/csv;charset=utf-8,' + escape(urls.join('\n')));
 ```
