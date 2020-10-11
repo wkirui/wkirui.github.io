@@ -59,7 +59,7 @@ Examples:
 - The farmer already had another crop on the shamba such as beans that they will have to harvest first before planting
 
 #### Model Tuning
-Our low accuary could be because some of the images we downloaded did not belong to any of our classes. 
+Our low accuracy could be because some of the images we downloaded did not belong to any of our classes. 
 
 As shown below, it's quite difficult to determine if the farm contains beans.
 ![](/assets/img/images_to_clean.png "poorly labeled images") 
