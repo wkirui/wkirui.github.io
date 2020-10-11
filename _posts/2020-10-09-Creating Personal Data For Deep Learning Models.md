@@ -10,11 +10,11 @@ excerpt: 'Deep Learning is an exciting field in machine learning. Through deep l
 ### Introduction
 I am taking the FastAi course [Practical Deep Learning for Coders Course](https://course19.fast.ai/) and I learned about this method of using google images for deep learning. I like to create personal projects to explore different ideas. I always enjoy using different datasets to answer specific questions and learn about a given topic. My career experience so far has been working in some way with small scale farmers in rural parts of Kenya and I was particularly interested in how deep learning can be applied to solve some of the challenges experienced during data collection from the field.
 
-#### 1. Problem Definition
+#### Problem Definition
 Most of the startups in Kenya in one way or another collect data from the field in order to track the progres of their projects. Most of the small scale farmers would either plant trees or subsistence crops such as maize and beans. To track crop growth progress, the field team would visit the shamba (farm) and take measurements such as crop height, shamba size and shamba GPS points. They could also take pictures of crops on the farm as well as any pests and dieseases. For instance, an outbreak of [Maize Lethal Necrosis Disease (MLN)](https://www.tandfonline.com/doi/full/10.1080/23311932.2019.1705746) in major maize (corn) producing regions in Kenya such as Rift Valley & Western could threaten production. A company working with farmers in any of these regions will have to deploy quick and surgical intervention methods that will help farmers mitigate the losses from such an outbreak.
 Photos can also be used to estimate crop growth rates across different regions in order to calculate production estimates.
 
-#### 2. Data Generation
+#### Data Generation
 In this analysis, we will create a deep learning model to determin the type of crop that a farmer planted on the farm. Suppose we're working in a region that has potential to grow maize and beans well and we are a startup company that supplies maize inputs such as seeds and fertilizer to farmers in this region. Each planting season we drive around with a truck delivering inputs to farmers and a few weeks after deliveries our field team visits them to make sure that they have followed planting guidelines and to take photos of their shambas.
 As data scientists on the team we propose that we can use deep learning to confirm whether the farmers actually planted the maize that we delivered. 
 Since we do not yet have any photos in our database, we are going to use google images to create a prototype model that we can share with the management. 
@@ -30,6 +30,7 @@ window.open('data:text/csv;charset=utf-8,' + escape(urls.join('\n')));
 Next, we upload the csv files to the same working directory as our python code in google colab and use the code below to create folders to store our images. The files **maize.csv** and **beans.csv** contain urls from our google image search.
 <script src="https://gist.github.com/wkirui/ccd63ce48d9b7982c41967aecb7bc589.js"></script>
 
+#### Model Training
 We can now train our deep learning model using fastai's learner library which provides a nice and easy to use wrapper for [Pytorch](https://pytorch.org/) library for machine learning.
 The following code shows how we train our convolutional neural network (cnn) using fastai. 
 <script src="https://gist.github.com/wkirui/35827917bbdd24f86b59bd8ede002d7d.js"></script>
@@ -41,7 +42,11 @@ The management knows that there are some edge cases where a farmer received the 
 - The farmer has a strong believe that the planting season is not right and will have to wait a bit longer. They believe that by planting a short term crop now they will be ready to plant maize at harvest.
 - The farmer already had another crop on the shamba such as beans that they will have to harvest first before planting
 
+#### Model Tuning
+The low accuary could be because some of the images we downloaded did not belong to any either of our classes. As shown below, it's quite difficult to determine if the farm contains beans.
+![](/assets/img/images_to_clean.png "poorly labeled images") 
+
 Lucky for us, fastai has a nice [image cleaner](https://fastai1.fast.ai/widgets.image_cleaner.html) that we can use to delete those images that our model wasn't sure about.
 <script src="https://gist.github.com/wkirui/f04387342963bffe0d5603d8032ba433.js"></script>
 
-Once we remove any images we do not want, our model accuracry increased to 78%.
+Deleting those poorly labeled images and training the model again get an accuracy of 78%. This is close enough to get a buyin from management. Now we need to further tweak our model for better perfomance when we start receiving images from the field.
