@@ -59,10 +59,12 @@ Examples:
 - The farmer already had another crop on the shamba such as beans that they will have to harvest first before planting
 
 #### Model Tuning
-Our low accuary could be because some of the images we downloaded did not belong to any of our classes. As shown below, it's quite difficult to determine if the farm contains beans.
+Our low accuary could be because some of the images we downloaded did not belong to any of our classes. 
+
+As shown below, it's quite difficult to determine if the farm contains beans.
 ![](/assets/img/images_to_clean.png "poorly labeled images") 
 
 Lucky for us, fastai has a nice [image cleaner](https://fastai1.fast.ai/widgets.image_cleaner.html) that we can use to delete those images that our model wasn't sure about.
 <script src="https://gist.github.com/wkirui/f04387342963bffe0d5603d8032ba433.js"></script>
 
-Deleting those poorly labeled images and training the model again gives us an accuracy of 78%. This is close enough to get a buyin from management. Now we need to further tweak our model for better perfomance when we start receiving images from the field.
+Deleting those poorly labeled images and training the model again our model accuracy increases to 78%. This is close enough to get a buy-in from management. Now we need to further tweak our model for better perfomance when we start receiving images from the field.
