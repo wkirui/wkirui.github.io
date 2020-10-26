@@ -5,17 +5,23 @@ title: 'About : Wesley Kirui'
 ---
 <section>
     <div id="about-me">
-        <h3>{{ "About me" |uppercase }}</h3>
-        <img src="https://avatars2.githubusercontent.com/u/48184076?s=400&u=748995892073307acacba04392e71bed293d7221&v=4" alt="Profile Pic" width="200" height="200">
+        <h3>{{ "About Me" |titlecase }}</h3>
+        <img src="https://avatars2.githubusercontent.com/u/48184076?s=400&u=748995892073307acacba04392e71bed293d7221&v=4" alt="Profile Pic" width="200" height="200" align="left" style="margin: 0px 10px 0px 10px;">
         <p>{{ "I work with data systems often helping to build tools for data collection, analysis and reporting.<br>
         This is a personal project to share thoughts and to take notes on different tools that I will be using.<br>
         I mostly use Python in day-to-day data operations and extensively use pandas, numpy, geopandas,<br>and scikit-learn for data analysis and machine learning." }}
         </p>
+        <br>
+        <br>
+        <br>
 
-        <h3>Contacts</h3>
-        <p>You can reach me on any of these platforms</p>
+        <p>You can reach me through these platforms</p>
+
+        <!-- <h3>Contacts</h3> -->
         <div id="social-media-list">
+            <!-- <p>You can reach me on any of these platforms</p> -->
             <ul>
+                <!-- <li>You can reach me on any of these platforms</li> -->
                 <li><a href="mailto:kkiruiwesley@gmail.com">
                         <ion-icon name="mail-outline"></ion-icon>
                         kkiruiwesley@gmail.com
@@ -38,5 +44,15 @@ title: 'About : Wesley Kirui'
                     </a></li>
             </ul>
         </div>
+        <div id="my-custom-map" style="width: 600px; height: 400px"></div>
+
+    <!-- <script>
+    var map = L.map('my-custom-map').setView([-3.621380,39.861606], 13);
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+        '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, '
+    }).addTo(map);
+    </script> -->
     </div>
 </section>
