@@ -1,0 +1,155 @@
+body{
+    font-family: sans-serif;
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 80vw;
+    font-size: 16px;
+    background-color: rgb(241, 235, 222);
+}
+h2, h3{
+    margin-left: 50px;
+}
+#summaryCharts {
+    display: flexbox;
+    /* margin-right: 100px; */
+    /* margin-left: 100px; */
+}
+
+#progressT {
+    float: left;
+    margin-left: 5vw;
+}
+#sumChart  {
+    float:right;
+    margin-right: 20vw;
+}
+#books-container{
+    display: inline-block;
+    margin-left: 50px;
+}
+/* img {
+    width: 150px;
+    height: 200px;
+    background-color: cadetblue;
+    margin-left: 80px;
+} */
+#book-details {
+    display: inline-block;
+    position: relative;
+    list-style-type: none;
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    line-height: 1.5px;
+    width: 300px;
+    height: 50px;
+    padding-bottom: 20px;
+}
+#book-details #title{
+    font-size: 20px;
+    color: burlywood;
+    width: 180px;
+    line-height: 20px;
+    white-space: pre-line;
+}
+
+#book-details .stars-x {
+    color:#ffc700;
+    text-decoration: none;
+    position: relative;
+}
+#book-details #update-button {
+    float: left;
+    margin-right: 60px;
+    
+}
+#book-details #delete-button {
+    /* float: right; */
+    
+}
+.new-books {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: lightgray;
+    font-size: 20px;
+}
+#new-books-form {
+    /* display: flexbox; */
+    position: relative;
+    display  : grid;
+    grid-gap : 5px;
+    grid-template-columns : repeat(2, 1fr);
+    grid-template-rows    : 10em 1em 1em 1;
+    text-align: left;
+    width: 70vw;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#new-books-form #submit{
+    text-align: center;
+    position: relative;
+    width: 30vw;
+}
+#new-books-form #sign-in{
+    text-align: center;
+    position: relative;
+    width: 30vw;
+}
+.collapsedForm {
+    background-color: rgba(40, 151, 96, 0.192);
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 80vw;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 18px;
+  }
+  
+  .active, .collapsedForm:hover {
+    background-color: #ccc;
+  }
+
+
+@media (max-device-width: 800px){
+    body {
+        margin-right: 20px;
+        margin-left: 20px;
+        width: 80vw;
+    }
+    #body-details {
+        width: auto;
+    }
+    #summaryCharts {
+        /* display: block; */
+        margin-right: 50px;
+        margin-left: 50px;
+    } 
+    
+    #progressT {
+        float: left;
+        /* display: in; */
+        /* float: center; */
+        /* float: left; */
+    }
+    #sumChart  {
+        /* float:right; */
+        /* display: inline; */
+        float: left;
+    }
+    #new-books-form {
+        display: inline;
+    }
+    #new-books-form #sign-in{
+        text-align: center;
+        position: relative;
+        width: 60vw;
+    }
+    #new-books-form #submit{
+        text-align: center;
+        position: relative;
+        width: 60vw;
+    }
+}

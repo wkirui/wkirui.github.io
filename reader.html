@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <title>Reading Tracker</title>
+  </head>
+
+  <body>
+    <h2>My Reading Tracker</h2>
+    <!-- <h4><a href="new-book.html">Add A Book</a></h4> -->
+    <!-- firebase setup -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+
+    <div id="summaryCharts">
+      <div id="sumChart">
+      <canvas id="pieChart"></canvas>
+      <div id="myLegend"></div>
+    </div>
+    <div id="progressT">
+      <canvas id="progressChart"></canvas>
+      <div id="progressLegend"></div>
+    </div>
+    </div>
+    <div id="books-container"></div>
+
+    <button type="button" class="collapsedForm"> Add A New Book </button>
+    <!-- <h3>Add A New Book</h3> -->
+    <div class="new-books" id="newBooks">
+      <form id="new-books-form">
+
+        <p>
+          <label>Title</label>
+          <input type="text" name="new-title" id="new-title" />
+        </p>
+        <p>
+          <label>Author</label>
+          <input type="text" name="new-author" id="new-author" />
+        </p>
+        <p>
+          <label>Genre</label>
+          <input type="text" name="new-genre" id="new-genre" />
+        </p>
+        <p>
+          <label>Date Published</label>
+          <input type="date" name="new-published" id="new-published" />
+        </p>
+        <p>
+          <label>Pages</label>
+          <input type="number" name="new-pages" id="new-pages" />
+        </p>
+        <p>
+          <label>Date</label>
+          <input type="datetime-local" name="new-added" id="new-added" />
+        </p>
+        <p>
+          <label>Rating</label>
+          <input type="number" name="new-rating" id="new-rating" />
+        </p>
+        <p>
+          <label>Photo</label>
+          <input type="file" name="new-photo" id="new-photo" />
+        </p>
+        <p class="new-sign">
+          <button id="sign-in">Sign In with Google</button>
+        </p>
+
+        <p class="new-form">
+          <button type="submit" id="submit">Submit</button>
+        </p>
+      </form>
+    </div>
+
+    <script src="/index.js"></script>
+  </body>
+  <!-- <script src="/index.js"></script> -->
+</html>
