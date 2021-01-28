@@ -3,7 +3,7 @@ layout : default
 title : 'Creating Personal Data For Deep Learning Models'
 date : '2020-10-11 16:00:00 +0300'
 categories: posts
-excerpt: Deep Learning is an exciting field in machine learning. Through deep learning, data scientists have access to a variety of tools to play around with datasets and to test different hypotheses. For instance if we wanted to quickly create  deep learning model to classify car types, we will first search online for any publicly available datasets such as Standford's cars dataset (https://ai.stanford.edu/~jkrause/cars/car_dataset.html). However if you are working on an edge case problem you won't have readily available dataset for easy download. In this article, I look at one of the ways to generate data for your deep learning projects
+excerpt: Deep Learning is an exciting field in machine learning. Through deep learning, data scientists have access to a variety of tools to play around with datasets and to test different hypotheses. For instance if we wanted to quickly create  deep learning model to classify car types, we will first search online for any publicly available datasets such as Standford's cars dataset. However if you are working on an edge case problem you won't have readily available dataset for easy download. In this article, I look at one of the ways to generate data for your deep learning projects
 ---
 # <center>Creating Personal Data for Deep Learning</center>
 
@@ -34,7 +34,9 @@ We search for **maize farming in Kenya** as shown here
 Then we scroll down the browser window until we have a good number of images to play around with. In order to download the images, right click on the browser and select inspect or command+option+I in Mac if using chrome. Then copy and paste the following code in the console and press enter. 
 
 ```javascript
-urls=Array.from(document.querySelectorAll('.rg_i')).map(el=> el.hasAttribute('data-src')?el.getAttribute('data-src'):el.getAttribute('data-iurl'));
+urls=Array.from(document.querySelectorAll('.rg_i')).map(el=> 
+    el.hasAttribute('data-src')?
+    el.getAttribute('data-src'):el.getAttribute('data-iurl'));
 window.open('data:text/csv;charset=utf-8,' + escape(urls.join('\n')));
 ```
 This will create a csv file with urls for the loaded images in a pop up window. Please note you might have to disable adblock for the download to work. Then repeat the same process for beans farming.
@@ -47,7 +49,9 @@ We can now train our deep learning model using fastai's learner library which pr
 
 The following code shows how we train our convolutional neural network (cnn) using fastai. 
 <script src="https://gist.github.com/wkirui/35827917bbdd24f86b59bd8ede002d7d.js"></script>
+<br>
 Running the code above, we get a model accuacy of 72% as shown below
+<br>
 ![](/assets/img/crop_model_results_v1.png "crop model v1")
 
 Our model accuracy of 72% is probably not strong enough to convince management that we have a good handle on detecting fraud cases on the farms. 
@@ -63,7 +67,8 @@ Our low accuracy could be because some of the images we downloaded did not belon
 
 As shown below, it's quite difficult to determine if the farm contains beans.
 ![](/assets/img/images_to_clean.png "poorly labeled images") 
-
+<br>
+<br>
 Lucky for us, fastai has a nice [image cleaner](https://fastai1.fast.ai/widgets.image_cleaner.html) that we can use to delete those images that our model wasn't sure about.
 <script src="https://gist.github.com/wkirui/f04387342963bffe0d5603d8032ba433.js"></script>
 

@@ -29,7 +29,10 @@ The following chart shows the percentage changes in mobility from their baseline
 - Sharp decline in visits to parks, shopping centers, transit and workplace
 - Increase in visits to parks, shopping centers between December and January
 
-We can also compare the changes in mobility between countries. In this analysis, we look at the differences in visits to retail and recreational centers in United States, Kenya, Greece and Germany
+We can also compare the changes in mobility between countries. 
+
+In this analysis, we look at the differences in visits to retail and recreational centers in United States, Kenya, Greece and Germany.
+<br>
 ![](/assets/img/ke_covid_mobility_comparison.png)
 
 **Observations:**

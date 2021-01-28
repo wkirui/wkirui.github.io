@@ -1,36 +1,41 @@
 ---
-
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/style.css">
+  <head>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="/assets/css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <title>{{ site.title }}</title>
-</head>
+  </head>
 
-<body>
+  <body>
     {% include header.html %}
     <div id="page-container">
-        <div id="content-wrap">
-            <section>
-                {% for post in site.categories.posts limit: 10 %}
-                <ul>
-                    {{ post.date | date: "%B %d %Y"  }}
-                    <a href="{{post.url}}">
-                        <h4>{{ post.title }}</h4>
-                    </a>
-                    {{ post.excerpt }}
-                </ul>
-                {% endfor %}
-            </section>
-        </div>
-        {% include footer.html %}
-
+      <div id="content-wrap">
+        <section>
+          {% for post in site.categories.posts limit: 10 %}
+          <ul>
+            <div id="post-title-wrap">
+              <p id="post-title">
+                <a href="{{post.url}}" style="text-decoration: none">
+                  {{ post.title }}
+                </a>
+              </p>
+              <p>{{ post.date | date: "%B %d %Y" }}</p>
+              <br>
+            </div>
+            {{ post.excerpt }}
+          </ul>
+          {% endfor %}
+        </section>
+      </div>
+      {% include footer.html %}
     </div>
-</body>
-
+  </body>
 </html>

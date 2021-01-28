@@ -2,9 +2,10 @@ body {
     background-color: white;
     font-family: 'Times New Roman', Times, serif;
     font-size: large;
-    padding-top: 60px;
+    padding-top: 45px;
     margin: 0;
     height: 100%;
+    background-color: whitesmoke;
     /* min-width: 980px; */
     /* min-width: 80vw; */
     /* text-align: justify; */
@@ -25,13 +26,19 @@ body {
     margin-bottom: 60px;
     overflow: hidden;
     min-height: 100vh;
+    font-size: 16px;
 }
 
+#post-title{
+    font-size: 20px !important;
+    margin-bottom: 10px;
+    padding-top: 20px;
+}
 p {
     color: black;
-    font-size: large;
+    font-size: 16px;
+    margin: 0px;
 }
-
 h1 {
     color: black;
     font-size: medium;
@@ -101,6 +108,8 @@ section {
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 60px;
+    /* padding-top: 5px; */
+    margin-top: 5px;
     /* padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
@@ -153,7 +162,7 @@ ion-icon {
     color:lightseagreen;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     html{
         overflow-x: hidden;
         height: 100%;
@@ -161,6 +170,7 @@ ion-icon {
     body{
         height: 100%;
         position: relative;
+        background-color: whitesmoke;
     }
 
     #page-container {
@@ -168,20 +178,33 @@ ion-icon {
         position: relative;
         display: block;
         overflow: hidden;
-        /* padding-bottom: 60px; */
 
     }
     
     #content-wrap {
         position: relative;
-        padding-bottom: 60px;
+        padding-bottom: 5px;
+        padding-left: 1px;
+        padding-right: 1px;
         display: block;
-        /* overflow: hidden; */
-        margin-left: 2vw;
-        margin-right: 2vw;
-        min-height: 100vh;
-        /* min-width: 100vw; */
-        /* margin-bottom: 60px; */
+        margin-left: 0px;
+        margin-right: 0px;
+        height: 100%;
+        margin-bottom: 20px;
+    }
+    p {
+        color: black;
+        font-size: 16px;
+        margin: 0px;
+    }
+    #post-title{
+        font-size: 20px;
+        margin-bottom: 10px;
+        padding-top: 20px;
+    }
+    ul{
+        padding-left: 2px;
+        padding-right: 2px;
     }
     #nav-bar.responsive {
         position: relative;
@@ -199,12 +222,13 @@ ion-icon {
     section {
         position: relative;
         display: block;
-        margin-left: 2px;
-        margin-right: 2px;
-        width: 95vw;
+        /* margin-left: 1px;
+        margin-right: 2px; */
+        margin-top: 5px;
+        width: 100vw;
         padding-left: 1px;
         padding-right: 1px;
-        padding-bottom: 60px;
+        padding-bottom: 20px;
     }
     img {
         width: auto ;
@@ -214,11 +238,13 @@ ion-icon {
     #footer {
         position: absolute;
         bottom: 0;
-        width: 95vw;
-        height: 60px;
+        width: 100vw;
+        height: 20px;
+        padding-top: 10px;
         clear: both;
         background-color: whitesmoke;
         /* padding-bottom: 10px; */
         padding-left: 5vw;
+        padding-right: 5vw;
     }
 }

@@ -1,6 +1,6 @@
 ---
 layout : default
-title : 'Airbnb Price Prediction using RandomForest'
+title : 'Airbnb Price Prediction using Random Forest'
 date : '2020-09-24 10:10:00 +0300'
 categories: posts
 excerpt: Is it possible to create a general machine learning model to predict the rental prices for apartments in any given city? Let's try it out using Airbnb data
