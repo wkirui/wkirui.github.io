@@ -2,9 +2,12 @@
 # General Settings
 title: Wesley Kirui | Data Science
 email: kkiruiwesley@gmail.com
-description: "Welcome to my Data Science journey!"
+description: "My Data Science Journey"
 baseurl: ""
 url: ""
+
+# Google Analytics
+google_analytics : "G-DLXVJQKB9K"
 
 # build settings
 markdown: kramdown
