@@ -161,6 +161,16 @@ ion-icon {
     font-size: 40px;
     color:lightseagreen;
 }
+pre,code {
+    font-size: 15px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    background-color: #fdf6e3;
+}
+
+code {
+    padding: 1px 5px;
+}
 
 @media screen and (max-width: 800px) {
     html{
@@ -246,5 +256,15 @@ ion-icon {
         /* padding-bottom: 10px; */
         padding-left: 5vw;
         padding-right: 5vw;
+    }
+    pre,code {
+        font-size: 15px;
+        border: 1px solid lightgrey;
+        border-radius: 3px;
+        background-color: rgb(229, 238, 237);
+    }
+    
+    code {
+        padding: 1px 5px;
     }
 }
