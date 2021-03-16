@@ -171,6 +171,9 @@ pre,code {
 code {
     padding: 1px 5px;
 }
+.center_image img { float: center; 
+    position: center;
+}
 
 @media screen and (max-width: 800px) {
     html{
@@ -267,4 +270,5 @@ code {
     code {
         padding: 1px 5px;
     }
+    .center_image img { float: center; }
 }

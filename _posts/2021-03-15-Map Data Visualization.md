@@ -54,8 +54,10 @@ sub_county_shapefile = gpd.read_file(
 counties_shapefile = sub_county_shapefile.dissolve('ADM1_EN')
 ```
 The resulting shapefile looks good. We can now go ahead and merge the shapefile with our data.
-
+<span class="center_image" style="margin-left:100px">
 ![](/assets/img/ke_counties_map.png)
+</span>
+
 #### Data analysis
 
 ##### 1. Data overview
