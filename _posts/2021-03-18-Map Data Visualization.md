@@ -1,7 +1,7 @@
 ---
 layout : default
 title : 'Map Data Visualization'
-date : '2021-03-18 22:00:00 +0300'
+date : '2021-03-18 10:00:00 +0300'
 categories: posts
 excerpt: In this post I visualize Kenya's population data using Python. I attempt to answer the question 'What is the distribution of Kenya's population?'
 ---
