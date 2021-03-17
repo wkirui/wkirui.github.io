@@ -5,7 +5,7 @@ date : '2021-03-15 22:00:00 +0300'
 categories: posts
 excerpt: In this post I visualize map data using Python.
 ---
-### What is the distribution of Kenya's population data?
+### What is the distribution of Kenya's population?
 
 #### Introduction
 In this analysis, I use Kenya's 2019 data to map the distribution of household sizes and population density in Python. The data is published at [Kenya National Bureau of Statistics website.](https://www.knbs.or.ke/?page_id=3142)
@@ -26,7 +26,7 @@ household_table_index = raw_content.find('Table 2.6:')
 pop_density_table_index = raw_content.find('Table 2.7:')
 last_index = raw_content.find("@KNBStats")-400
 ```
-We know that the households table ends where population density table begins. Similarly the population ends before the last index minus extra text added to the end of the document.
+We know that the households table ends where population density table begins. Similarly the population table ends before the last index minus any extra text that is at the end of the document.
 ```python
 
 household_table_text = raw_content[
@@ -35,13 +35,13 @@ population_density_table_text = raw_content[
     pop_density_table_index:last_index].split('\n')
 
 ```
-Once we have extracted the tables text we can start cleaning them. Lucky for us the tables follow a similar structure and we can apply some tricks such as:
-- drop rows that contains header text such as Household, Population or Sq.km
-- extract integer values
-- extract string values 
-- remove spaces and punctuation marks
-- replace incorrectly spelled county/sub-county names
-- replace any outliers with the correct values
+Once we have extracted the tables as text we can start cleaning them. Lucky for us the extracted data follow a similar structure and we can apply some tricks such as:
+- dropping rows that contains header text such as Household, Population or Sq.km
+- extracting integer values
+- extracting string values 
+- removing spaces and punctuation marks
+- replacing incorrectly spelled county/sub-county names
+- replacing any outliers with the correct values
 
 The resulting data is a pandas dataframe that we can merge with the counties shapefile.
 
@@ -53,8 +53,8 @@ sub_county_shapefile = gpd.read_file(
 # ADM1_EN is the county name column
 counties_shapefile = sub_county_shapefile.dissolve('ADM1_EN')
 ```
-The resulting shapefile looks good. We can now go ahead and merge the shapefile with our data.
-<span class="center_image" style="margin-left:100px">
+As shown here, the resulting shapefile looks good and we can now go ahead and merge it with our data.
+<span class="center_image" style="float:center">
 ![](/assets/img/ke_counties_map.png)
 </span>
 
@@ -62,7 +62,7 @@ The resulting shapefile looks good. We can now go ahead and merge the shapefile 
 
 ##### 1. Data overview
 
-Below are the summary statistics using the **describe** function in pandas.
+The first step of our analysis is to understand how the data is distributed. To do this, we use **describe** function in pandas to generate summary statistics. The table below shows **count, mean, standard deviation, quartile range, min,max, kurtosis and skewness** values for our dataset.
 
 ![](/assets/img/census_data_summary.png)
 - the least populated county has 143920 people while the most populated county has 4397073 people
@@ -76,13 +76,22 @@ The graphs below show the population and population density distribution
 
 - there is only one outlier (Nairobi) in the population sizes
 - population density has two outliers (Mombasa & Nairobi)
+- the total population data is highly skewed to the left. Most of the counties 1.5 million or less people
+- all counties except Nairobi and Mombasa have 1000 or less people per square kilometer
 
 ![](/assets/img/county_population.png)|![](/assets/img/county_pop_density.png)
 
-The graph below shows the map distribution
+We can visualize this distribution on a map to get a better idea of how the population is distributed across Kenya.
+As shown in the population density map below:
+- the northern and the eastern parts of Kenya are sparsely populated. Pastoralism is the main economic activity in these regions. These counties include Mandera, Marsabit, Turkana, Isiolo and Samburu
+- central and western parts of Kenya are densely populated
 
 ![](/assets/img/county_pop_map.png)
 ![](/assets/img/county_codes.png)
+
+The following graphs show counties with the highest and the lowest population sizes respectively.
+
+![](/assets/img/most_populous_counties.png)|![](/assets/img/least_populous_counties.png)
 
 ##### 3. Households
 
