@@ -5,7 +5,7 @@ date : '2021-03-18 10:00:00 +0300'
 categories: posts
 excerpt: In this post I visualize Kenya's population data using Python. I attempt to answer the question 'What is the distribution of Kenya's population?'
 ---
-#### What is the distribution of Kenya's population?
+#### How is Kenya's population distributed?
 
 ### Introduction
 In this analysis, I use Kenya's 2019 census data to visualize the distribution of household sizes and population density in Python. The data is published at the [Kenya National Bureau of Statistics' website.](https://www.knbs.or.ke/?page_id=3142)
@@ -45,7 +45,7 @@ Once we have extracted the tables as text we can start cleaning them. Lucky for 
 
 The resulting data is a pandas dataframe that we can merge with the counties shapefile.
 
-#### Shapefiles
+### Shapefiles
 The shapefile that I found [here](https://data.humdata.org/dataset/ken-administrative-boundaries) is for Kenya's sub-counties. **Geopandas** has a nice function that we use to combine sub-counties into counties. 
 ```python
 sub_county_shapefile = gpd.read_file(
@@ -58,7 +58,7 @@ As shown here, the resulting shapefile looks good and we can now go ahead and me
 ![](/assets/img/ke_counties_map.png)
 </span>
 
-### Data analysis
+### Data Analysis
 
 #### 1. Data overview
 
